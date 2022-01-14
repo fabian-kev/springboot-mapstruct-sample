@@ -6,7 +6,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.UUID;
 
 @SpringBootApplication
 @RequiredArgsConstructor
@@ -20,9 +22,9 @@ public class MapstructDemoApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		Student s = Student.builder()
-				.id(2l)
+				.id(UUID.randomUUID())
 				.name("Kevin Fabian")
-				.birthDate(new Date())
+				.birthDate(LocalDateTime.now())
 				.build();
 		System.out.println(studentMapper.toResource(s));
 

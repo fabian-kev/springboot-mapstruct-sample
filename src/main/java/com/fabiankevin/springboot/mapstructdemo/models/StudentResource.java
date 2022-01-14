@@ -6,7 +6,7 @@ import java.util.Date;
 
 @Data
 public class StudentResource {
-    private Long id;
+    private String id;
     private String fullName;
     private Date birthDate;
 }

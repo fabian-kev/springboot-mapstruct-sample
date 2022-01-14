@@ -6,14 +6,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.context.annotation.Bean;
 
+import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.UUID;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 public class Student {
-    private Long id;
+    private UUID id;
     private String name;
-    private Date birthDate;
+    private LocalDateTime birthDate;
 }
